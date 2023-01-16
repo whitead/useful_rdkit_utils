@@ -5,7 +5,10 @@ from .useful_rdkit_utils import *
 from .reos import REOS
 from .pandas_utils import *
 from .ring_systems import *
-from .seaborn_utils import *
+try:
+    from .seaborn_utils import *
+except ImportError:
+    pass
 
 # Handle versioneer
 from ._version import get_versions

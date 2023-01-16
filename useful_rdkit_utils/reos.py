@@ -1,5 +1,4 @@
 import sys
-from pathlib import Path
 
 import pandas as pd
 import pystow
@@ -37,10 +36,9 @@ class REOS:
         self.rule_df['pat'] = smarts_mol_list
         return smarts_are_ok
 
-    def read_rules(self, rules_file, active_rules=None):
+    def read_rules(self, active_rules=None):
         """Read a rules file
 
-        :param rules_file: name of the rules file
         :param active_rules: list of active rule sets, all rule sets are used if
             this is None
         :return: None
